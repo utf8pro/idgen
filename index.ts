@@ -23,18 +23,3 @@ export function createGenerator(): TGenerator {
 
   return {generate, shardId}
 }
-
-const gen = createGenerator()
-
-const id1 = gen.generate(1),
-  id2 = gen.generate(64),
-  id3 = gen.generate(3)
-
-console.log(id1, id2, id3)
-
-const shard1 = gen.shardId(id1),
-  shard2 = gen.shardId(id2),
-  shard3 = gen.shardId(id3)
-
-console.log(shard1, shard2, shard3)
-
